@@ -545,11 +545,7 @@ game.Players.LocalPlayer.Character.Humanoid.Health = 0
 	end,
 })
 
-local ShadowEveryDoor = OtherTab:CreateButton({
-        Name = "Shadow Every Door"
-	Callback = function()
-	loadstring(game:HttpGet('https://github.com/Noonie1/RandomUtilities/blob/ShadowScript/ShadowMain.lua?raw=true'))()
-})
+
 local BreakLightButton = OtherTab:CreateButton({
 	Name = "Break Lights",
 	Callback = function()
