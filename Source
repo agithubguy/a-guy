@@ -47,20 +47,6 @@ local ScreechButton = SpawnTab:CreateButton({
 		require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game.RemoteListener.Modules.Screech)(Data)
 	end,
 })
-local NpcButton = SpawnTab:CreateButton({
-     Name = "Spawn Npc"
-     Callback = function()
-     local npc = game:GetObjects("rbxassetid://11573989591")[1]
-npc.Parent = workspace
-npc.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-npc.Humanoid.WalkSpeed = 9
-
-
-game:GetService("RunService").RenderStepped:Connect(function()
-    npc.Humanoid:MoveTo(game.Players.LocalPlayer.Character.HumanoidRootPart.Position)
-end)
- })
-     
 local RushButton = SpawnTab:CreateButton({
 	Name = "Spawn Rush",
 	Callback = function()
@@ -153,6 +139,8 @@ end
 Creator.runEntity(entity)
 	end,
 })
+
+
 
 local SeekButton = SpawnTab:CreateButton({
 	Name = "Spawn Seek",
@@ -544,7 +532,6 @@ game.Players.LocalPlayer.Character.Humanoid.Health = 0
 	end
 	end,
 })
-
 
 local BreakLightButton = OtherTab:CreateButton({
 	Name = "Break Lights",
